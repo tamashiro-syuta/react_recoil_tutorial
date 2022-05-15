@@ -4,8 +4,8 @@ import searchedTodoListSelector  from '../selectors/SearchedTodoListSelector'
 import Todo from "../types/Todo";
 
 const TodoList: React.FC = () => {
-  // useRecoilValueにsearchedTodoListSelectorの値を渡してる
-  // 返される値は、searchedTodoListSelectorのget()で定義した通りTodo[]
+  // useRecoilValueにsearchedTodoListSelectorの値(get関数でreturnしたオブジェクト)を渡してる
+  // useRecoilValueで返される値は、searchedTodoListSelectorのget()で定義した通りTodo[]
   const list: Todo[] = useRecoilValue(searchedTodoListSelector);
   return (
     <div>

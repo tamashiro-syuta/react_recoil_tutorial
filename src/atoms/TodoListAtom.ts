@@ -15,12 +15,13 @@ import Todo from '../types/Todo'
 // 要はkeyとdefault(管理したい値の初期値)を渡せばOK!!!!
 // 下では、TodoListのタスク一覧を管理するように定義
 
+// タスク一覧の状態
 const todoListState = atom<Todo[]>({
   key: 'todoList',
   default: [
-    { title: 'one' },
-    { title: 'two' },
-    { title: 'three' },
+    { title: 'タスク１' },
+    { title: 'タスク2' },
+    { title: 'タスク3' },
   ],
 })
 

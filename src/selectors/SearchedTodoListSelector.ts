@@ -19,7 +19,9 @@ import Todo from "../types/Todo";
 
 const searchedTodoListSelectors = selector<Todo[]>({
   key: 'searchedTodoListSelector',
-  // getは、{ get }を引数に取る関数
+  // { get }は、recoilが用意した値を取得する用のメソッド (↓↓書き方↓↓)
+  // get: ({ get })=> { atomの値を取得する内容 }
+  // returnしたオブジェクトが、useRecoilValue(selectorのkey)で使えるようになる
   get: ({ get }) => {
     // 引数getを利用してAtomからtodoListStateの最新の値を取得(タスク一覧)
     const todoList: Todo[] = get(todoListState);

@@ -10,9 +10,9 @@ import todoTitleFormState from "../atoms/TodoTitleFromAtom";
 
 
 const TitleForm: React.FC = () => {
-  // useRecoilValueでtodoTitleFormStateの値を取得
+  // useRecoilValue => todoTitleFormStateの値を取得
   const todoTitleFormValue: string = useRecoilValue(todoTitleFormState);
-  // useSetRecoilStateでtodoTitleFormStateの値を更新するSetter関数を取得
+  // useSetRecoilState => todoTitleFormStateの値を更新するSetter関数を取得
   const setTodoTitleFormValue: SetterOrUpdater<string> = useSetRecoilState(
     todoTitleFormState
   );
